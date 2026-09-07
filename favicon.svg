@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="The Courage Economy">
+  <rect width="16" height="16" fill="#0a1f3d"/>
+  <circle cx="8" cy="8" r="6" fill="none" stroke="#c9a052" stroke-width="1"/>
+  <polygon fill="#c9a052" points="8,2 9,8 8,14 7,8"/>
+  <polygon fill="#c9a052" points="2,8 8,7 14,8 8,9"/>
+  <rect x="7" y="7" width="2" height="2" fill="#e8e4dc"/>
+</svg>
