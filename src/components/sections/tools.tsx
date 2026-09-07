@@ -15,7 +15,7 @@ export function Tools() {
           <div className="rule-gold my-8" />
           <p className="text-body leading-relaxed text-pretty text-paper-dim">
             Two instruments anyone can use. The diagnostic is the place. The
-            inventory is you. Client work — the OCI and Followers’ View — is not
+            inventory is you. Client work — the OCI and the ICI — is not
             on this page. You get those when we work together.
           </p>
         </Reveal>
