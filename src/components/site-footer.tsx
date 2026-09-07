@@ -18,8 +18,9 @@ export function SiteFooter() {
           <CompassMark className="size-6" />
           <div>
             <p className="font-display text-base leading-none">{SITE.name}</p>
-            <p className="mt-1 text-xs text-muted">
-              © {new Date().getFullYear()} Bellomo Leadership
+            <p className="mt-1 max-w-xs text-xs leading-relaxed text-muted">
+              © {new Date().getFullYear()} Bellomo Leadership LLC. All rights
+              reserved.
             </p>
           </div>
         </div>
