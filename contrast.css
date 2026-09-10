@@ -1,23 +1,103 @@
-/* Section contrast: navy / paper like the Repaint draft */
-#idea, #tools, #book, #loop {
+/* Alternating navy / cream sections — Repaint-style contrast on the existing site */
+
+#idea,
+#tools,
+#book,
+#loop {
   background-color: #e8e4dc !important;
-}
-#idea h2, #idea h3, #idea blockquote,
-#tools h2, #book h2, #loop h2 {
-  color: #071422 !important;
-}
-#idea p, #book p, #loop p {
   color: #3a4550 !important;
 }
+
+#idea h1,
+#idea h2,
+#idea h3,
+#idea h4,
+#tools h1,
+#tools h2,
+#tools h3,
+#tools h4,
+#book h1,
+#book h2,
+#book h3,
+#book h4,
+#loop h1,
+#loop h2,
+#loop h3,
+#loop h4 {
+  color: #071422 !important;
+}
+
+#idea p,
+#idea li,
+#idea blockquote,
+#book p,
+#book li,
+#loop p,
+#loop li,
 #tools > div > div:first-child p {
   color: #3a4550 !important;
 }
-#tools article {
+
+#idea .text-paper,
+#idea .text-paper-dim,
+#book .text-paper,
+#book .text-paper-dim,
+#loop .text-paper,
+#loop .text-paper-dim,
+#tools .text-paper,
+#tools .text-paper-dim {
+  color: #3a4550 !important;
+}
+
+#idea blockquote,
+#idea .italic {
+  color: #071422 !important;
+}
+
+/* Keep tool cards and form fields navy so they sit on cream */
+#tools article,
+#loop form input,
+#loop .border.bg-navy,
+#loop [class*="bg-navy"] {
   background-color: #0a1f3d !important;
 }
-#tools article h3 {
+
+#tools article h3,
+#tools article .text-paper,
+#loop [class*="bg-navy"] p,
+#loop [class*="bg-navy"] .font-display {
   color: #e8e4dc !important;
 }
-#tools article p {
+
+#tools article p,
+#tools article .text-paper-dim,
+#loop [class*="bg-navy"] .text-paper-dim {
   color: #b8b4ac !important;
+}
+
+#loop input {
+  color: #e8e4dc !important;
+}
+
+/* Outline buttons on cream sections */
+#book a.border,
+#loop a.border {
+  border-color: rgba(7, 20, 34, 0.22) !important;
+  color: #071422 !important;
+}
+
+#top,
+#map,
+#notes,
+#work,
+footer {
+  background-color: #0a1f3d;
+}
+
+#map {
+  background-color: #0a1f3d !important;
+}
+
+#idea {
+  background-color: #ebe6dc !important;
 }
