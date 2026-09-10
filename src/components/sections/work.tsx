@@ -5,7 +5,7 @@ import { LINKS } from "@/lib/site";
 
 export function Work() {
   return (
-    <section id="work" className="px-5 py-24 sm:px-8 sm:py-32">
+    <section id="work" className="bg-navy px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <figure className="relative overflow-hidden rounded-sm border border-hairline">

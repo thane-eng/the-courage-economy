@@ -5,15 +5,15 @@ import { TOOLS } from "@/lib/site";
 
 export function Tools() {
   return (
-    <section id="tools" className="bg-navy-deep px-5 py-24 sm:px-8 sm:py-32">
+    <section id="tools" className="bg-paper px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Public tools · 03</p>
-          <h2 className="font-display mt-4 text-section tracking-display text-paper">
+          <h2 className="font-display mt-4 text-section tracking-display text-ink">
             See it. Then you can’t unsee it.
           </h2>
           <div className="rule-gold my-8" />
-          <p className="text-body leading-relaxed text-pretty text-paper-dim">
+          <p className="text-body leading-relaxed text-pretty text-ink-soft">
             Two instruments anyone can use. The diagnostic is the place. The
             inventory is you. Client work — the OCI and the ICI — is not
             on this page. You get those when we work together.
@@ -23,7 +23,7 @@ export function Tools() {
         <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {TOOLS.map((tool, i) => (
             <Reveal key={tool.name} delay={i * 80}>
-              <article className="flex h-full flex-col border border-hairline bg-navy/40 p-7 sm:p-9">
+              <article className="flex h-full flex-col border border-rule bg-navy p-7 sm:p-9">
                 <p className="eyebrow">{tool.kicker}</p>
                 <h3 className="font-display mt-4 text-2xl text-paper sm:text-3xl">
                   {tool.name}

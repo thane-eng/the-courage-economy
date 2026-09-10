@@ -15,19 +15,19 @@ export function Loop() {
   }
 
   return (
-    <section id="loop" className="bg-navy-deep px-5 py-24 sm:px-8 sm:py-28">
+    <section id="loop" className="bg-paper px-5 py-24 sm:px-8 sm:py-28">
       <Reveal className="mx-auto max-w-xl text-center">
         <p className="eyebrow">Stay in the work</p>
-        <h2 className="font-display mt-4 text-section tracking-display text-paper">
+        <h2 className="font-display mt-4 text-section tracking-display text-ink">
           One list. The idea, the book, nothing else.
         </h2>
         <div className="rule-gold mx-auto my-8" />
-        <p className="text-body leading-relaxed text-paper-dim">
+        <p className="text-body leading-relaxed text-ink-soft">
           Launch dates, an excerpt, and the essays that matter. No theater.
         </p>
 
         {done ? (
-          <div className="mt-10 border border-goldline bg-navy px-6 py-8">
+          <div className="mt-10 border border-rule bg-navy px-6 py-8">
             <p className="font-display text-xl text-paper">You’re on the list.</p>
             <p className="mt-3 text-sm leading-relaxed text-paper-dim">
               The essays live on Substack. That’s where the work continues between
@@ -54,7 +54,7 @@ export function Loop() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
-              className="h-12 min-w-0 flex-1 rounded-sm border border-hairline bg-navy px-4 text-base text-paper outline-none placeholder:text-muted focus:border-gold"
+              className="h-12 min-w-0 flex-1 rounded-sm border border-rule bg-navy px-4 text-base text-paper outline-none placeholder:text-muted focus:border-gold"
             />
             <Button type="submit" className="h-12 shrink-0">
               Subscribe

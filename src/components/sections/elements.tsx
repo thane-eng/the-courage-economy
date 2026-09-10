@@ -8,7 +8,7 @@ export function Elements() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="map" className="px-5 py-24 sm:px-8 sm:py-32">
+    <section id="map" className="bg-navy px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="eyebrow">The map · 02</p>

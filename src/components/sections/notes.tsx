@@ -28,7 +28,7 @@ const CHANNELS = [
 
 export function Notes() {
   return (
-    <section id="notes" className="px-5 py-24 sm:px-8 sm:py-32">
+    <section id="notes" className="bg-navy px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Field notes · 04</p>
@@ -50,7 +50,7 @@ export function Notes() {
                 href={ch.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex h-full flex-col bg-navy p-7 transition-colors duration-200 hover:bg-navy-mid sm:p-8"
+                className="group flex h-full flex-col bg-navy-deep p-7 transition-colors duration-200 hover:bg-navy-mid sm:p-8"
               >
                 <p className="eyebrow">{ch.kicker}</p>
                 <h3 className="font-display mt-5 text-2xl text-paper">{ch.name}</h3>

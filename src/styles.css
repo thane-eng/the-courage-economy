@@ -5,6 +5,7 @@
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 
   --color-ink: #071422;
+  --color-ink-soft: #3a4550;
   --color-navy: #0a1f3d;
   --color-navy-mid: #122a4d;
   --color-navy-deep: #06101c;
@@ -15,6 +16,7 @@
   --color-muted: #8f8a80;
   --color-hairline: color-mix(in srgb, #e8e4dc 12%, transparent);
   --color-goldline: color-mix(in srgb, #c9a052 38%, transparent);
+  --color-rule: color-mix(in srgb, #071422 14%, transparent);
 
   --radius-sm: 2px;
   --radius-md: 4px;
