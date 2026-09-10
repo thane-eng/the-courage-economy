@@ -1,0 +1,23 @@
+/* Section contrast: navy / paper like the Repaint draft */
+#idea, #tools, #book, #loop {
+  background-color: #e8e4dc !important;
+}
+#idea h2, #idea h3, #idea blockquote,
+#tools h2, #book h2, #loop h2 {
+  color: #071422 !important;
+}
+#idea p, #book p, #loop p {
+  color: #3a4550 !important;
+}
+#tools > div > div:first-child p {
+  color: #3a4550 !important;
+}
+#tools article {
+  background-color: #0a1f3d !important;
+}
+#tools article h3 {
+  color: #e8e4dc !important;
+}
+#tools article p {
+  color: #b8b4ac !important;
+}
