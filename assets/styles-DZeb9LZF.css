@@ -1,2 +1,48 @@
 @import url("https://cdn.jsdelivr.net/gh/thane-eng/the-courage-economy@f1702e45e13a31e1523e09feefffa3c52f59413f/assets/styles-DZeb9LZF.css");
-@import url("/contrast.css?v=2");
+
+#idea,
+#tools,
+#book,
+#loop {
+  background-color: #e8e4dc !important;
+  color: #3a4550 !important;
+}
+#idea h1, #idea h2, #idea h3,
+#tools h2, #tools h3,
+#book h2, #book h3,
+#loop h2 {
+  color: #071422 !important;
+}
+#idea p, #idea li, #idea blockquote,
+#book p, #loop p,
+#tools > div > div:first-child p {
+  color: #3a4550 !important;
+}
+#idea .text-paper, #idea .text-paper-dim,
+#book .text-paper, #book .text-paper-dim,
+#loop .text-paper, #loop .text-paper-dim {
+  color: #3a4550 !important;
+}
+#idea blockquote, #idea .italic {
+  color: #071422 !important;
+}
+#tools article,
+#loop form input {
+  background-color: #0a1f3d !important;
+}
+#tools article h3 {
+  color: #e8e4dc !important;
+}
+#tools article p {
+  color: #b8b4ac !important;
+}
+#loop input {
+  color: #e8e4dc !important;
+}
+#book a.border {
+  border-color: rgba(7, 20, 34, 0.22) !important;
+  color: #071422 !important;
+}
+#map, #notes, #work, #top {
+  background-color: #0a1f3d;
+}
