@@ -8,8 +8,8 @@ export const SITE = {
 };
 
 export const LINKS = {
-  diagnostic: "https://diagnostic.bellomoleadership.com",
-  inventory: "https://diagnostic.bellomoleadership.com/inventory.html",
+  diagnostic: "https://diagnostic.thecourageeconomy.net",
+  inventory: "https://diagnostic.thecourageeconomy.net/inventory.html",
   substack: "https://thane.substack.com",
   youtube: "https://www.youtube.com/@thanebellomo",
   linkedin: "https://www.linkedin.com/in/thanebellomo/",
