@@ -2,8 +2,7 @@ export const SITE = {
   name: "The Courage Economy",
   tagline: "A field guide for leaders building organizations where truth is the default",
   title: "The Courage Economy",
-  subtitle:
-    "How comfortable lies are bankrupting your organization — and how to build one that runs on truth.",
+  subtitle: "Why Companies Lie and How to Change Yours",
   sequence: "Two public tools. Then the book. Then the work.",
 };
 

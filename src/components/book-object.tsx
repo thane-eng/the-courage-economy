@@ -14,10 +14,10 @@ export function BookObject({
         <div className="book-face">
           <img
             src="/brand/book-cover.jpg"
-            alt="The Courage Economy — book cover"
+            alt="The Courage Economy — Why Companies Lie and How to Change Yours"
             className="h-full w-full object-cover"
-            width={900}
-            height={1350}
+            width={681}
+            height={1000}
           />
         </div>
         <div className="book-pages" />

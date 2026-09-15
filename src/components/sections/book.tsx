@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { BookObject } from "@/components/book-object";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
-import { LINKS } from "@/lib/site";
+import { LINKS, SITE } from "@/lib/site";
 
 export function Book() {
   return (
@@ -14,13 +14,11 @@ export function Book() {
         <Reveal delay={80}>
           <p className="eyebrow">The book · 05</p>
           <h2 className="font-display mt-4 text-section tracking-display text-ink">
-            The Courage Economy
+            {SITE.title}
           </h2>
           <div className="rule-gold my-8" />
           <p className="max-w-xl text-body leading-relaxed text-pretty text-ink-soft">
-            How Comfortable Lies Are Bankrupting Your Organization — and How to
-            Build One That Runs on Truth. The field guide. Not a culture campaign
-            in hardcover.
+            {SITE.subtitle}. The field guide. Not a culture campaign in hardcover.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
