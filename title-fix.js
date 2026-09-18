@@ -8,6 +8,11 @@
       "How Comfortable Lies Are Bankrupting Your Organization \u2014 and How to Build One That Runs on Truth.",
       "Why Companies Lie and How to Change Yours",
     ],
+    ["See the place", "See it in your organization"],
+    ["SEE THE PLACE", "SEE IT IN YOUR ORGANIZATION"],
+    ["The diagnostic is the place.", "The diagnostic is your organization."],
+    ["The place", "Your organization"],
+    ["THE PLACE", "YOUR ORGANIZATION"],
   ];
   function apply() {
     if (document.title === "The Courage Economy") {
