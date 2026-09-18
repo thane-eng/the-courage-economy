@@ -27,7 +27,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
               <a href={LINKS.diagnostic} target="_blank" rel="noreferrer">
-                See the place
+                See it in your organization
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>

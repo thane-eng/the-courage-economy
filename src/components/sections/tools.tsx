@@ -14,7 +14,7 @@ export function Tools() {
           </h2>
           <div className="rule-gold my-8" />
           <p className="text-body leading-relaxed text-pretty text-ink-soft">
-            Two instruments anyone can use. The diagnostic is the place. The
+            Two instruments anyone can use. The diagnostic is your organization. The
             inventory is you. Client work — the OCI and the ICI — is not
             on this page. You get those when we work together.
           </p>

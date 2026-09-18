@@ -66,7 +66,7 @@ export const ELEMENTS = [
 
 export const TOOLS = [
   {
-    kicker: "The place",
+    kicker: "Your organization",
     name: "Courage Economy Diagnostic",
     body: "35 questions. 15–20 minutes. Where this organization actually stands across the five elements — and what the gaps are costing.",
     href: LINKS.diagnostic,
