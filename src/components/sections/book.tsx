@@ -14,21 +14,22 @@ export function Book() {
         <Reveal delay={80}>
           <p className="eyebrow">The book · 05</p>
           <h2 className="font-display mt-4 text-section tracking-display text-ink">
-            {SITE.title}
+            {SITE.fullTitle}
           </h2>
           <div className="rule-gold my-8" />
           <p className="max-w-xl text-body leading-relaxed text-pretty text-ink-soft">
-            {SITE.subtitle}. The field guide. Not a culture campaign in hardcover.
+            The field guide. Not a culture campaign in hardcover. Pre-order now.
+            Releases {SITE.releaseDate}.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
               <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-                Pre-order
+                Pre-order on Amazon
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>
             <Button asChild variant="outline">
-              <a href="#loop">Get launch updates</a>
+              <a href="/book">About the book</a>
             </Button>
           </div>
         </Reveal>
