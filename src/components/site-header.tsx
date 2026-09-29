@@ -18,16 +18,21 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    const ids = NAV.map((n) => n.href.slice(1));
+    const path = window.location.pathname;
+    const match = NAV.find((n) => n.href === path);
+    if (match) setActive(match.href);
+
+    const ids = NAV.map((n) => n.href.split("#")[1]).filter(Boolean);
     const els = ids
-      .map((id) => document.getElementById(id))
+      .map((id) => document.getElementById(id as string))
       .filter((el): el is HTMLElement => Boolean(el));
+    if (!els.length) return;
     const io = new IntersectionObserver(
       (entries) => {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible?.target.id) setActive(`#${visible.target.id}`);
+        if (visible?.target.id) setActive(`/#${visible.target.id}`);
       },
       { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.2, 0.5] },
     );
@@ -52,7 +57,7 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.5rem] sm:px-8">
-        <a href="#top" className="flex items-center gap-3 text-paper">
+        <a href="/" className="flex items-center gap-3 text-paper">
           <CompassMark className="size-7" />
           <span className="font-display text-lg leading-none tracking-tight">
             {SITE.name}
@@ -66,17 +71,15 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 "text-sm transition-colors duration-150",
-                active === item.href
-                  ? "text-gold"
-                  : "text-paper-dim hover:text-paper",
+                active === item.href ? "text-gold" : "text-paper-dim hover:text-paper",
               )}
             >
               {item.label}
             </a>
           ))}
           <Button asChild size="sm">
-            <a href={LINKS.contact} target="_blank" rel="noreferrer">
-              Work with Thane
+            <a href={LINKS.amazon} target="_blank" rel="noreferrer">
+              Pre-order
             </a>
           </Button>
         </nav>
@@ -92,12 +95,7 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div
-        className={cn(
-          "lg:hidden",
-          open ? "block" : "hidden",
-        )}
-      >
+      <div className={cn("lg:hidden", open ? "block" : "hidden")}>
         <nav
           className="flex min-h-[calc(100dvh-4rem)] flex-col gap-1 border-t border-hairline bg-navy px-6 py-8"
           aria-label="Mobile"
@@ -113,8 +111,8 @@ export function SiteHeader() {
             </a>
           ))}
           <Button asChild className="mt-6 w-full">
-            <a href={LINKS.contact} target="_blank" rel="noreferrer">
-              Work with Thane
+            <a href={LINKS.amazon} target="_blank" rel="noreferrer">
+              Pre-order the book
             </a>
           </Button>
         </nav>
