@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { BookObject } from "@/components/book-object";
+import { EndorsementRotator } from "@/components/endorsement-rotator";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { LINKS, SITE } from "@/lib/site";
@@ -7,7 +8,7 @@ import { LINKS, SITE } from "@/lib/site";
 export function Book() {
   return (
     <section id="book" className="bg-paper px-5 py-24 sm:px-8 sm:py-32">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[0.42fr_1fr] lg:gap-20">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.38fr_1fr] lg:gap-16">
         <Reveal>
           <BookObject size="inline" />
         </Reveal>
@@ -16,12 +17,9 @@ export function Book() {
           <h2 className="font-display mt-4 text-section tracking-display text-ink">
             {SITE.fullTitle}
           </h2>
-          <div className="rule-gold my-8" />
-          <p className="max-w-xl text-body leading-relaxed text-pretty text-ink-soft">
-            The field guide. Not a culture campaign in hardcover. Pre-order now.
-            Releases {SITE.releaseDate}.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="rule-gold my-6" />
+          <EndorsementRotator />
+          <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>
               <a href={LINKS.amazon} target="_blank" rel="noreferrer">
                 Pre-order on Amazon
