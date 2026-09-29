@@ -2,12 +2,14 @@ import { CompassMark } from "@/components/compass";
 import { LINKS, SITE } from "@/lib/site";
 
 const FOOTER = [
-  { href: LINKS.diagnostic, label: "Diagnostic" },
+  { href: "/diagnostic", label: "Diagnostic" },
   { href: LINKS.inventory, label: "Lie Inventory" },
+  { href: "/lie-economy", label: "Lie Economy" },
+  { href: "/elements", label: "Five elements" },
+  { href: "/book", label: "Book" },
+  { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
   { href: LINKS.substack, label: "Substack" },
-  { href: LINKS.youtube, label: "YouTube" },
-  { href: "#book", label: "Book" },
-  { href: LINKS.contact, label: "Work" },
 ];
 
 export function SiteFooter() {
@@ -19,8 +21,8 @@ export function SiteFooter() {
           <div>
             <p className="font-display text-base leading-none">{SITE.name}</p>
             <p className="mt-1 max-w-xs text-xs leading-relaxed text-muted">
-              © {new Date().getFullYear()} Bellomo Leadership LLC. All rights
-              reserved.
+              By {SITE.author}. © {new Date().getFullYear()} {SITE.org}. All
+              rights reserved.
             </p>
           </div>
         </div>

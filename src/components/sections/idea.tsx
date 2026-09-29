@@ -23,6 +23,15 @@ export function Idea() {
             This is not another culture initiative. It is designed productive
             struggle — a way to make truth cheaper than lying, on purpose. Five
             elements make honesty the rational choice, not the brave exception.
+            Read the diagnosis of{" "}
+            <a href="/lie-economy" className="underline decoration-gold">
+              the Lie Economy
+            </a>{" "}
+            and the map of{" "}
+            <a href="/elements" className="underline decoration-gold">
+              the five elements
+            </a>
+            .
           </p>
         </div>
         <p className="font-display mt-12 max-w-xl text-xl leading-snug text-ink italic">
