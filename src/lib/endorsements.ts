@@ -1,0 +1,14 @@
+export const ENDORSEMENTS = [
+  {
+    quote:
+      "Most leaders try to fix silence by asking people to be braver. Thane Bellomo shows why that never works, and how to redesign work so that telling the truth becomes the rational choice. With hard-won stories and a practical framework, The Courage Economy shows leaders how to stop paying for comfortable lies.",
+    name: "Dr. David Burkus",
+    credit: "Author of Best Team Ever",
+  },
+  {
+    quote:
+      "The Courage Economy is a provocative read, and Bellomo poses questions every leader should ponder. What lies do we tell at work and why, what is the cost, and what would our organizations look like without those lies? Bellomo provides some actions to consider for leaders who dare to tread.",
+    name: "Kathryn Zukof",
+    credit: "Author of The Hard and Soft Sides of Change Management",
+  },
+] as const;

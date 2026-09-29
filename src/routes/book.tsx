@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { BookObject } from "@/components/book-object";
 import { PageShell } from "@/components/page-shell";
+import { Endorsements } from "@/components/sections/endorsements";
 import { Button } from "@/components/ui/button";
 import { LINKS, SITE } from "@/lib/site";
 import { pageHead } from "@/lib/seo";
@@ -29,7 +30,7 @@ function BookPage() {
             <p className="max-w-xl text-body leading-relaxed text-paper-dim">
               Most organizations run on a hidden Lie Economy. Small, comfortable lies buy short-term harmony and create management debt. This book is the field guide for building the alternative.
             </p>
-            <p className="mt-4 text-sm tracking-wide text-gold">Releases {SITE.releaseDate} · By {SITE.author}</p>
+            <p className="mt-4 text-sm tracking-wide text-gold">Releases {SITE.releaseDate} \u00b7 By {SITE.author}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
                 <a href={LINKS.amazon} target="_blank" rel="noreferrer">
@@ -44,7 +45,8 @@ function BookPage() {
           </div>
         </div>
       </section>
-      <section className="bg-paper px-5 py-20 sm:px-8">
+      <Endorsements tone="paper" kicker="Early readers" />
+      <section className="bg-paper px-5 pb-20 sm:px-8">
         <div className="mx-auto max-w-3xl space-y-6 text-body leading-relaxed text-ink-soft">
           <h2 className="font-display text-3xl tracking-display text-ink">Who it is for</h2>
           <p>C-suite and senior leaders who already know the culture is lying to itself and are done buying another initiative to postpone the reckoning.</p>

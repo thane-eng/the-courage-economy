@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Book } from "@/components/sections/book";
 import { Elements } from "@/components/sections/elements";
+import { Endorsements } from "@/components/sections/endorsements";
 import { Hero } from "@/components/sections/hero";
 import { Idea } from "@/components/sections/idea";
 import { Loop } from "@/components/sections/loop";
@@ -30,6 +31,7 @@ function Home() {
         <Tools />
         <Notes />
         <Book />
+        <Endorsements tone="navy" />
         <Work />
         <Loop />
       </main>
