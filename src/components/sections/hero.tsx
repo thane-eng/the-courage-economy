@@ -22,24 +22,22 @@ export function Hero() {
           </h1>
           <div className="rule-gold my-7" />
           <p className="max-w-xl text-lg leading-relaxed text-pretty text-paper-dim sm:text-xl">
-            {SITE.subtitle}
+            {SITE.subtitle}. By {SITE.author}. Out {SITE.releaseDate}.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
-              <a href={LINKS.diagnostic} target="_blank" rel="noreferrer">
-                See it in your organization
+              <a href={LINKS.amazon} target="_blank" rel="noreferrer">
+                Pre-order the book
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>
             <Button asChild variant="outline">
-              <a href={LINKS.inventory} target="_blank" rel="noreferrer">
-                See it in yourself
+              <a href={LINKS.diagnostic} target="_blank" rel="noreferrer">
+                Take the diagnostic
               </a>
             </Button>
             <Button asChild variant="ghost">
-              <a href={LINKS.substack} target="_blank" rel="noreferrer">
-                Read
-              </a>
+              <a href="/work">Work with Thane</a>
             </Button>
           </div>
           <p className="mt-8 text-sm tracking-wide text-muted">{SITE.sequence}</p>
