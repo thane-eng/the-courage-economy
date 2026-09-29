@@ -27,7 +27,7 @@ export function Endorsements({
                 <p className={`font-display text-xl leading-snug tracking-display sm:text-2xl ${
                   dark ? "text-paper" : "text-ink"
                 }`}>
-                  \u201c{item.quote}\u201d
+                  "{item.quote}"
                 </p>
                 <footer className="mt-6">
                   <cite className={`not-italic text-sm font-semibold tracking-wide ${
