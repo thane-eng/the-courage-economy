@@ -67,7 +67,6 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: `${SITE.url}/og.jpg` },
     ],
     links: [
-      { rel: "canonical", href: SITE.url },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },

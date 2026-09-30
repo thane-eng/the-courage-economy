@@ -9,8 +9,14 @@ import { Tools } from "@/components/sections/tools";
 import { Work } from "@/components/sections/work";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SITE } from "@/lib/site";
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  component: Home,
+  head: () => ({
+    links: [{ rel: "canonical", href: `${SITE.url}/` }],
+  }),
+});
 
 function Home() {
   return (

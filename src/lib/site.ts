@@ -1,6 +1,6 @@
 export const SITE = {
   name: "The Courage Economy",
-  url: "https://thecourageeconomy.net",
+  url: "https://www.thecourageeconomy.net",
   tagline: "A field guide for leaders building organizations where truth is the default",
   title: "The Courage Economy",
   subtitle: "Why Companies Lie and How to Change Yours",

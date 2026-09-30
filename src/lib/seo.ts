@@ -9,7 +9,7 @@ export function pageHead({
   description: string;
   path?: string;
 }) {
-  const url = `${SITE.url}${path === "/" ? "" : path}`;
+  const url = `${SITE.url}${path}`;
   const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
   return {
     meta: [
