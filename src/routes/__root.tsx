@@ -9,6 +9,8 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { LINKS, SITE } from "@/lib/site";
 import appCss from "../styles.css?url";
 
+const GA_ID = "G-EYHW6Z8LXL";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -80,6 +82,15 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`,
+        async: true,
+      },
+      {
+        children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
       },
     ],
   }),
