@@ -13,7 +13,7 @@ export const ENDORSEMENTS = [
   },
   {
     quote:
-      "The Courage Economy is well written, and far more useful than most of what crosses my desk. Bellomo frames the three states of an organizational culture so clearly that a leader can leverage them the same day. Bellomo is also willing to dig into uncomfortable material, including lying and the psychology that makes it feel professional. This book has informed and deepened my own work on respectful leadership, and is an excellent, valuable, and important addition to the organizational development canon.",
+      "The Courage Economy is well written, and far more useful than most of what crosses my desk. Bellomo frames the three states of an organizational culture so clearly that a leader can leverage them the same day. He is also willing to dig into uncomfortable material, including lying and the psychology that makes it feel professional. This book has informed and deepened my own work on respectful leadership, and is an excellent, valuable, and important addition to the organizational development canon.",
     name: "Gregg Ward",
     credit:
       "Founder/Executive Director, The Center for Respectful Leadership. Author of the award-winning, bestselling business fable, The Respectful Leader",
