@@ -3,7 +3,7 @@ import { ENDORSEMENTS } from "@/lib/endorsements";
 
 const DWELL_MS = 7000;
 
-export function EndorsementRotator() {
+function useEndorsementIndex() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -16,6 +16,29 @@ export function EndorsementRotator() {
     return () => window.clearInterval(id);
   }, [paused]);
 
+  return { index, setIndex, setPaused };
+}
+
+function Dots({ index, setIndex, tone }: { index: number; setIndex: (i: number) => void; tone: "ink" | "paper" }) {
+  if (ENDORSEMENTS.length < 2) return null;
+  return (
+    <div className="mt-4 flex gap-2" role="tablist" aria-label="Endorsements">
+      {ENDORSEMENTS.map((entry, i) => (
+        <button
+          key={entry.name}
+          type="button"
+          aria-label={`Show endorsement from ${entry.name}`}
+          aria-selected={i === index}
+          className={`h-1.5 w-6 ${i === index ? "bg-gold" : tone === "paper" ? "bg-paper/30" : "bg-ink/20"}`}
+          onClick={() => setIndex(i)}
+        />
+      ))}
+    </div>
+  );
+}
+
+export function EndorsementRotator() {
+  const { index, setIndex, setPaused } = useEndorsementIndex();
   const item = ENDORSEMENTS[index];
 
   return (
@@ -34,20 +57,29 @@ export function EndorsementRotator() {
           <p className="mt-1 text-sm text-ink-soft">{item.credit}</p>
         </footer>
       </blockquote>
-      {ENDORSEMENTS.length > 1 ? (
-        <div className="mt-5 flex gap-2" role="tablist" aria-label="Endorsements">
-          {ENDORSEMENTS.map((entry, i) => (
-            <button
-              key={entry.name}
-              type="button"
-              aria-label={`Show endorsement from ${entry.name}`}
-              aria-selected={i === index}
-              className={`h-1.5 w-6 ${i === index ? "bg-gold" : "bg-ink/20"}`}
-              onClick={() => setIndex(i)}
-            />
-          ))}
-        </div>
-      ) : null}
+      <Dots index={index} setIndex={setIndex} tone="ink" />
     </div>
+  );
+}
+
+export function HeroProof() {
+  const { index, setIndex, setPaused } = useEndorsementIndex();
+  const item = ENDORSEMENTS[index];
+
+  return (
+    <figure
+      className="mt-8 max-w-xl border-l-2 border-gold pl-4"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <blockquote>
+        <p className="text-base leading-relaxed text-paper">“{item.line}”</p>
+      </blockquote>
+      <figcaption className="mt-2 text-sm text-muted">
+        <cite className="not-italic text-paper">{item.name}</cite>
+        <span> · {item.credit.split(".")[0]}</span>
+      </figcaption>
+      <Dots index={index} setIndex={setIndex} tone="paper" />
+    </figure>
   );
 }
