@@ -37,7 +37,7 @@ export function Hero() {
                 Take the diagnostic
               </a>
             </Button>
-            <Button asChild variant="ghost">
+            <Button asChild variant="outline">
               <a href="/work">Work with Thane</a>
             </Button>
           </div>
