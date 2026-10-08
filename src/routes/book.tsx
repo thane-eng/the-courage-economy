@@ -57,6 +57,10 @@ function BookPage() {
           <p>
             Read the map on the <a href="/elements" className="text-ink underline decoration-gold">five elements</a> page, or start with the <a href="/lie-economy" className="text-ink underline decoration-gold">Lie Economy</a>.
           </p>
+          <h2 className="font-display pt-6 text-3xl tracking-display text-ink">About the author</h2>
+          <p>
+            Thane Bellomo spent 25 years inside the organizations he writes about — Fortune 500 consulting, then 15 years leading organizational development in the U.S. nuclear industry, where silence is not a metaphor. He has sat with executive teams who already knew the culture was buying harmony with comfortable lies. Bellomo Leadership is the practice that came out of that work. The Courage Economy is the field guide.
+          </p>
         </div>
       </section>
     </PageShell>
