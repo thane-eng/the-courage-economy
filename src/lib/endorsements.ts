@@ -1,6 +1,12 @@
 export const ENDORSEMENTS = [
   {
     quote:
+      "The Courage Economy puts language around something I’ve seen throughout my career: organizations don’t usually struggle because they lack smart, capable people. They struggle because the way work gets done makes avoidance easier than honesty and comfort easier than challenge. Thane makes a compelling case that courage isn’t something we can simply ask of people. We have to create the conditions where people can question, challenge, take ownership, and do important work together. His idea that trust is an outcome, built through the work rather than manufactured through an initiative, particularly resonated with me. This book will make leaders look differently at their organizations and at the systems they may be unintentionally reinforcing.",
+    name: "Sarah Bolin",
+    credit: "Founder & CEO, Ledra",
+  },
+  {
+    quote:
       "Most leaders try to fix silence by asking people to be braver. Thane Bellomo shows why that never works, and how to redesign work so that telling the truth becomes the rational choice. With hard-won stories and a practical framework, The Courage Economy shows leaders how to stop paying for comfortable lies.",
     name: "Dr. David Burkus",
     credit: "Author of Best Team Ever",
