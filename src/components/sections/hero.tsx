@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { BookObject } from "@/components/book-object";
+import { HeroProof } from "@/components/endorsement-rotator";
 import { Button } from "@/components/ui/button";
 import { LINKS, SITE } from "@/lib/site";
 
@@ -40,6 +41,7 @@ export function Hero() {
               <a href="/work">Work with Thane</a>
             </Button>
           </div>
+          <HeroProof />
           <p className="mt-8 text-sm tracking-wide text-muted">{SITE.sequence}</p>
         </div>
         <BookObject />
