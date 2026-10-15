@@ -11,7 +11,7 @@ export const SITE = {
   releaseDate: "October 15, 2026",
   releaseIso: "2026-10-15",
   description:
-    "The Courage Economy by Thane Bellomo is a field guide for leaders building organizations where truth is the default. Take the free diagnostic, pre-order the book, or start the work.",
+    "The Courage Economy by Thane Bellomo is a field guide for leaders building organizations where truth is the default. Take the free diagnostic, available now on Amazon, or start the work.",
 };
 
 export const LINKS = {
@@ -69,7 +69,7 @@ export const ELEMENTS = [
     missing:
       "Dissent is treated as disloyalty. The smartest people in the room spend their energy calculating whether it is safe to speak.",
     monday:
-      "Ask: \u201cTell me why this is a dumb idea.\u201d If nobody answers, you do not have a challenge problem. You have a fear problem.",
+      "Ask: \"Tell me why this is a dumb idea.\" If nobody answers, you do not have a challenge problem. You have a fear problem.",
     angle: 54,
   },
   {
@@ -91,7 +91,7 @@ export const ELEMENTS = [
     role: "The Bond",
     line: "Forged in shared struggle. Not in off-sites.",
     missing:
-      "Community is scheduled. Off-sites, values days, and language about \u201cfamily\u201d try to buy what only shared hard work creates.",
+      "Community is scheduled. Off-sites, values days, and language about \"family\" try to buy what only shared hard work creates.",
     monday:
       "Put two teams on one problem that actually matters and keep them together until it is solved. Community follows the work.",
     angle: 198,
@@ -102,12 +102,12 @@ export const TOOLS = [
   {
     kicker: "Your organization",
     name: "Courage Economy Diagnostic",
-    body: "35 questions. 15\u201320 minutes. Where this organization actually stands across the five elements \u2014 and what the gaps are costing.",
+    body: "35 questions. 15–20 minutes. Where this organization actually stands across the five elements — and what the gaps are costing.",
     href: LINKS.diagnostic,
     cta: "Start the diagnostic",
     stats: [
       { value: "35", label: "questions" },
-      { value: "15\u201320", label: "minutes" },
+      { value: "15–20", label: "minutes" },
       { value: "5", label: "elements" },
     ],
   },
