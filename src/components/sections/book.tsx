@@ -22,7 +22,7 @@ export function Book() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>
               <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-                Pre-order on Amazon
+                Available now on Amazon!
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>
