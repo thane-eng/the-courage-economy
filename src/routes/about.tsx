@@ -34,7 +34,7 @@ function AboutPage() {
               He built Bellomo Leadership to work with C-suite and VP-level leaders who are done buying harmony with comfortable lies. The Courage Economy is the framework that came out of that work.
             </p>
             <p>
-              He is the author of <em>Teamwork in Talent Development</em>, <em>The Courage to Lead</em>, and {SITE.fullTitle}, releasing {SITE.releaseDate}.
+              He is the author of <em>Teamwork in Talent Development</em>, <em>The Courage to Lead</em>, and {SITE.fullTitle}, available now.
             </p>
             <p>
               The personal site remains <a href={LINKS.nameSite} className="underline decoration-gold">thanebellomo.com</a>. This site is the home of the work.
@@ -42,7 +42,7 @@ function AboutPage() {
             <div className="flex flex-wrap gap-3 pt-4">
               <Button asChild><a href="/work">The work</a></Button>
               <Button asChild variant="outline">
-                <a href={LINKS.amazon} target="_blank" rel="noreferrer">Pre-order the book</a>
+                <a href={LINKS.amazon} target="_blank" rel="noreferrer">Available now on Amazon!</a>
               </Button>
             </div>
           </div>
