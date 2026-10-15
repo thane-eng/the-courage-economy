@@ -28,7 +28,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
               <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-                Pre-order the book
+                Available now on Amazon!
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>
