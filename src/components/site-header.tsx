@@ -79,7 +79,7 @@ export function SiteHeader() {
           ))}
           <Button asChild size="sm">
             <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-              Pre-order
+              Available now
             </a>
           </Button>
         </nav>
@@ -112,7 +112,7 @@ export function SiteHeader() {
           ))}
           <Button asChild className="mt-6 w-full">
             <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-              Pre-order the book
+              Available now on Amazon!
             </a>
           </Button>
         </nav>
