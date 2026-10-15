@@ -12,7 +12,7 @@ export const Route = createFileRoute("/book")({
   head: () =>
     pageHead({
       title: SITE.fullTitle,
-      description: `${SITE.fullTitle} by ${SITE.author}. Pre-order now. Releases ${SITE.releaseDate}.`,
+      description: `${SITE.fullTitle} by ${SITE.author}. Available now on Amazon!`,
       path: "/book",
     }),
 });
@@ -30,11 +30,11 @@ function BookPage() {
             <p className="max-w-xl text-body leading-relaxed text-paper-dim">
               Most organizations run on a hidden Lie Economy. Small, comfortable lies buy short-term harmony and create management debt. This book is the field guide for building the alternative.
             </p>
-            <p className="mt-4 text-sm tracking-wide text-gold">Releases {SITE.releaseDate} · By {SITE.author}</p>
+            <p className="mt-4 text-sm tracking-wide text-gold">Available now · By {SITE.author}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
                 <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-                  Pre-order on Amazon
+                  Available now on Amazon!
                   <ArrowUpRight className="size-4" />
                 </a>
               </Button>
