@@ -35,12 +35,6 @@ const RESOURCES = [
     type: "DOCX",
   },
   {
-    title: "Lie Economy vs Courage Economy",
-    description: "Slide deck comparing the two economies, with OCI context.",
-    file: "lie-economy-vs-courage-economy.pptx",
-    type: "PPTX",
-  },
-  {
     title: "Three Stages",
     description: "Visual of the three stages.",
     file: "3-stages.jpg",
