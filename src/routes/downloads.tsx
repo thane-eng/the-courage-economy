@@ -30,9 +30,9 @@ const RESOURCES = [
   },
   {
     title: "Lie Catalog",
-    description: "Catalog of common comfortable lies and their costs.",
-    file: "lie-catalog.docx",
-    type: "DOCX",
+    description: "Sixty comfortable lies that keep the Lie Economy running. Named so they can be seen.",
+    file: "lie-catalog.pdf",
+    type: "PDF",
   },
   {
     title: "Three Stages",
