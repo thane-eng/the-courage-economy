@@ -85,7 +85,11 @@ function DownloadsPage() {
                 </p>
               </div>
               <Button asChild size="sm" variant="outline" className="shrink-0">
-                <a href={`/downloads/${item.file}`} download>
+                <a
+                  href={`/downloads/${item.file}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Download className="size-4" />
                   Download
                 </a>
