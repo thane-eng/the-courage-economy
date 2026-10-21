@@ -6,13 +6,17 @@ const SubscribeSchema = z.object({
   firstName: z.string().optional(),
 });
 
+function env(key: string): string | undefined {
+  const v = process.env[key]?.trim();
+  return v || undefined;
+}
+
 export const subscribeToMailchimp = createServerFn({ method: "POST" })
   .validator(SubscribeSchema)
   .handler(async ({ data }) => {
-    const apiKey = process.env.MAILCHIMP_API_KEY?.trim();
-    const audienceId = process.env.MAILCHIMP_AUDIENCE_ID?.trim();
-    const server =
-      process.env.MAILCHIMP_SERVER?.trim() || apiKey?.split("-")[1];
+    const apiKey = env("MAILCHIMP_API_KEY");
+    const audienceId = env("MAILCHIMP_AUDIENCE_ID");
+    const server = env("MAILCHIMP_SERVER") || apiKey?.split("-")[1];
 
     if (!apiKey || !audienceId || !server) {
       const available = Object.keys(process.env)
