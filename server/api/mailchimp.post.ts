@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
     console.error("Mailchimp env missing. Available related keys:", available);
     throw createError({
       statusCode: 500,
-      statusMessage: `Subscription service is not configured. Available keys: ${available.join(", ") || "(none)"}`,
+      statusMessage: "Something went wrong",
     });
   }
 
@@ -52,7 +52,7 @@ export default defineEventHandler(async (event) => {
     console.error("Mailchimp error", err);
     throw createError({
       statusCode: 502,
-      statusMessage: err.detail || "Could not subscribe.",
+      statusMessage: "Something went wrong",
     });
   }
 
