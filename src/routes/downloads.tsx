@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/seo";
-import { subscribeToMailchimp } from "@/lib/mailchimp.server";
+import { subscribeToMailchimp } from "@/lib/mailchimp";
 
 export const Route = createFileRoute("/downloads")({
   component: DownloadsPage,
