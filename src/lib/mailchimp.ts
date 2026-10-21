@@ -15,8 +15,15 @@ export const subscribeToMailchimp = createServerFn({ method: "POST" })
     const server = env("MAILCHIMP_SERVER") || apiKey?.split("-")[1];
 
     if (!apiKey || !audienceId || !server) {
-      console.error("Mailchimp env vars missing");
-      throw new Error("Subscription service is not configured.");
+      const missing = [
+        !apiKey && "MAILCHIMP_API_KEY",
+        !audienceId && "MAILCHIMP_AUDIENCE_ID",
+        !server && "MAILCHIMP_SERVER",
+      ].filter(Boolean);
+      console.error("Mailchimp env vars missing", missing);
+      throw new Error(
+        `Subscription service is not configured (missing: ${missing.join(", ")}).`,
+      );
     }
 
     const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
