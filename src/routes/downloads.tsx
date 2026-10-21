@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
 import { Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/seo";
-import { subscribeToMailchimp } from "@/lib/mailchimp";
 
 export const Route = createFileRoute("/downloads")({
   component: DownloadsPage,
@@ -78,7 +76,6 @@ function trackDownload(file: string) {
 }
 
 function DownloadsPage() {
-  const subscribe = useServerFn(subscribeToMailchimp);
   const [unlocked, setUnlockedState] = useState(false);
   const [pendingFile, setPendingFile] = useState<string | null>(null);
   const [email, setEmail] = useState("");
@@ -110,7 +107,15 @@ function DownloadsPage() {
     setBusy(true);
     setError(null);
     try {
-      await subscribe({ data: { email, firstName: firstName || undefined } });
+      const res = await fetch("/api/mailchimp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, firstName: firstName || undefined }),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || `Request failed (${res.status})`);
+      }
       setUnlocked();
       setUnlockedState(true);
       const file = pendingFile;
