@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { env } from "./env.server";
 
 const SubscribeSchema = z.object({
   email: z.string().email(),
@@ -10,19 +9,18 @@ const SubscribeSchema = z.object({
 export const subscribeToMailchimp = createServerFn({ method: "POST" })
   .validator(SubscribeSchema)
   .handler(async ({ data }) => {
-    const apiKey = env("MAILCHIMP_API_KEY");
-    const audienceId = env("MAILCHIMP_AUDIENCE_ID");
-    const server = env("MAILCHIMP_SERVER") || apiKey?.split("-")[1];
+    const apiKey = process.env.MAILCHIMP_API_KEY?.trim();
+    const audienceId = process.env.MAILCHIMP_AUDIENCE_ID?.trim();
+    const server =
+      process.env.MAILCHIMP_SERVER?.trim() || apiKey?.split("-")[1];
 
     if (!apiKey || !audienceId || !server) {
-      const missing = [
-        !apiKey && "MAILCHIMP_API_KEY",
-        !audienceId && "MAILCHIMP_AUDIENCE_ID",
-        !server && "MAILCHIMP_SERVER",
-      ].filter(Boolean);
-      console.error("Mailchimp env vars missing", missing);
+      const available = Object.keys(process.env)
+        .filter((k) => k.includes("MAIL") || k.startsWith("VERCEL") || k === "NODE_ENV")
+        .sort();
+      console.error("Mailchimp env missing. Available related keys:", available);
       throw new Error(
-        `Subscription service is not configured (missing: ${missing.join(", ")}).`,
+        `Subscription service is not configured. Available keys: ${available.join(", ") || "(none)"}`,
       );
     }
 
