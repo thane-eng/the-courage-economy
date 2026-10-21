@@ -124,7 +124,7 @@ function DownloadsPage() {
       setFirstName("");
       startDownload(file);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong.");
+      console.error(err); setError("Something went wrong. Please try again.");
     } finally {
       setBusy(false);
     }
