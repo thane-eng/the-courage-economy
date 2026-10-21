@@ -8,7 +8,7 @@ const SubscribeSchema = z.object({
 });
 
 export const subscribeToMailchimp = createServerFn({ method: "POST" })
-  .validator(SubscribeSchema)
+  .inputValidator(SubscribeSchema)
   .handler(async ({ data }) => {
     const apiKey = env("MAILCHIMP_API_KEY");
     const audienceId = env("MAILCHIMP_AUDIENCE_ID");
@@ -19,26 +19,27 @@ export const subscribeToMailchimp = createServerFn({ method: "POST" })
       throw new Error("Subscription service is not configured.");
     }
 
+    const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
     const url = `https://${server}.api.mailchimp.com/3.0/lists/${audienceId}/members`;
 
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString("base64")}`,
+        Authorization: `Basic ${auth}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email_address: data.email,
-        status: "subscribed", // change to "pending" for double opt-in
-        merge_fields: data.firstName
-          ? { FNAME: data.firstName }
-          : undefined,
+        status: "subscribed",
+        merge_fields: data.firstName ? { FNAME: data.firstName } : undefined,
       }),
     });
 
     if (!response.ok) {
-      const err = await response.json().catch(() => ({}));
-      // Already subscribed is fine — treat as success
+      const err = (await response.json().catch(() => ({}))) as {
+        title?: string;
+        detail?: string;
+      };
       if (response.status === 400 && err.title === "Member Exists") {
         return { ok: true, already: true };
       }
