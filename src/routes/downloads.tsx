@@ -30,6 +30,12 @@ const RESOURCES = [
     type: "PDF",
   },
   {
+    title: "Incentive Inventory",
+    description: "What you say versus what you actually reward. Reveals the system behind the lies.",
+    file: "incentive-inventory.pdf",
+    type: "PDF",
+  },
+  {
     title: "Lie Catalog",
     description: "Sixty comfortable lies that keep the Lie Economy running. Named so they can be seen.",
     file: "lie-catalog.pdf",
