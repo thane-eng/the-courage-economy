@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import { PageHero, PageShell } from "@/components/page-shell";
@@ -77,6 +78,7 @@ function trackDownload(file: string) {
 }
 
 function DownloadsPage() {
+  const subscribe = useServerFn(subscribeToMailchimp);
   const [unlocked, setUnlockedState] = useState(false);
   const [pendingFile, setPendingFile] = useState<string | null>(null);
   const [email, setEmail] = useState("");
@@ -108,7 +110,7 @@ function DownloadsPage() {
     setBusy(true);
     setError(null);
     try {
-      await subscribeToMailchimp({ data: { email, firstName: firstName || undefined } });
+      await subscribe({ data: { email, firstName: firstName || undefined } });
       setUnlocked();
       setUnlockedState(true);
       const file = pendingFile;
