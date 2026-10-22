@@ -39,6 +39,9 @@ function BookPage() {
                 </a>
               </Button>
               <Button asChild variant="outline">
+                <a href="/downloads/courage-economy-book-sample.pdf" target="_blank" rel="noreferrer">Read a sample →</a>
+              </Button>
+              <Button asChild variant="outline">
                 <a href={LINKS.diagnostic} target="_blank" rel="noreferrer">Take the diagnostic first</a>
               </Button>
             </div>
