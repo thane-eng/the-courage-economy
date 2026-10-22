@@ -29,6 +29,9 @@ export function Book() {
             <Button asChild variant="outline">
               <a href="/book">About the book</a>
             </Button>
+            <Button asChild variant="outline">
+              <a href="/downloads/courage-economy-book-sample.pdf" target="_blank" rel="noreferrer">Read a sample →</a>
+            </Button>
           </div>
         </Reveal>
       </div>
