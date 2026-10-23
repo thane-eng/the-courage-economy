@@ -118,6 +118,49 @@
   }
 }
 
+
+/* unlayered so it beats the bg-paper utility */
+.theme-cream .bg-paper { background-color: #fffdf8; }
+.theme-cream .bg-paper-dim\/20 { background-color: #f6f1e6; }
+.theme-cream figcaption .eyebrow,
+.theme-cream figcaption .text-gold { color: #ddc07a; }
+
+/* Homepage cream/editorial test treatment (scoped via .theme-cream on the home route).
+   Swaps the dark tokens for light ones so existing utility classes re-theme in place. */
+@layer components {
+  .theme-cream {
+    --color-navy: #faf7f0;
+    --color-navy-mid: #f1ebdd;
+    --color-navy-deep: #f3eee3;
+    --color-paper: #0a1f3d;
+    --color-paper-dim: #3d4c63;
+    --color-muted: #6b675f;
+    --color-gold-bright: #9c7a33;
+    --color-hairline: color-mix(in srgb, #0a1f3d 12%, transparent);
+    --color-goldline: color-mix(in srgb, #c9a050 55%, transparent);
+    --color-gold: #c9a050;
+    color: #0a1f3d;
+  }
+  .theme-cream .grain { display: none; }
+  .theme-cream .eyebrow { color: #8a6a28; }
+  .theme-cream .text-gold { color: #8a6a28; }
+  .theme-cream ::selection { color: #0a1f3d; }
+  .theme-cream main > section { border-top: 1px solid color-mix(in srgb, #0a1f3d 7%, transparent); }
+  .theme-cream main > section:first-child { border-top: 0; }
+  @media (min-width: 640px) {
+    .theme-cream main > section:not(#top) { padding-top: 9rem; padding-bottom: 9rem; }
+  }
+  .theme-cream h2 { letter-spacing: -0.02em; line-height: 1.08; }
+  .theme-cream p { line-height: 1.75; }
+  /* Image captions keep light text over their dark gradient */
+  .theme-cream figcaption {
+    --color-paper: #faf7f0;
+    --color-paper-dim: #e8e4dc;
+    --color-muted: #cfc9bd;
+  }
+  .theme-cream .bg-gold { color: #0a1f3d; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

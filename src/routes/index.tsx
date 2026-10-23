@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <div className="relative min-h-dvh bg-navy text-paper">
+    <div className="theme-cream relative min-h-dvh bg-navy text-paper">
       <div className="grain" aria-hidden="true" />
       <a
         href="#idea"
