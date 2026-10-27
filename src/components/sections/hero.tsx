@@ -25,20 +25,20 @@ export function Hero() {
           <p className="max-w-xl text-lg leading-relaxed text-pretty text-paper-dim sm:text-xl">
             {SITE.subtitle}. By {SITE.author}. Out {SITE.releaseDate}.
           </p>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-paper-dim sm:text-lg">
+            See where your organization sits between the Lie Economy and the Courage Economy — free, 3 minutes.
+          </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild>
-              <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-                Available now on Amazon!
-                <ArrowUpRight className="size-4" />
-              </a>
-            </Button>
-            <Button asChild variant="outline">
               <a href={LINKS.diagnostic} target="_blank" rel="noreferrer">
                 Take the diagnostic
               </a>
             </Button>
             <Button asChild variant="outline">
-              <a href="/work">Work with Thane</a>
+              <a href={LINKS.amazon} target="_blank" rel="noreferrer">
+                Available now on Amazon
+                <ArrowUpRight className="size-4" />
+              </a>
             </Button>
           </div>
           <HeroProof />
