@@ -16,6 +16,13 @@ export const Route = createFileRoute("/field-notes")({
 const NOTES = [
   {
     date: "October 2026",
+    title: "How Important Work Drives Truth",
+    excerpt:
+      "A discussion of incentives reveals the Lie Economy in real time. The only thing that short-circuits self-protection is work important enough that people will defer their interests to it.",
+    href: "/downloads/How_Important_Work_Drives_Truth.pdf",
+  },
+  {
+    date: "October 2026",
     title: "The Struggle Is the Point",
     excerpt:
       "Why do some groups accomplish extraordinary things together while most never do? A story from the Adirondacks at 17, and what it revealed about designing organizations where the struggle itself creates trust, community, and truth.",
@@ -29,32 +36,11 @@ const NOTES = [
     href: "/downloads/AI_and_the_Struggle.pdf",
   },
   {
-    date: "May 2026",
-    title: "The Meeting After the Meeting",
+    date: "August 2026",
+    title: "Trust",
     excerpt:
-      "Every organization has a meeting after the meeting. Productive disagreement is the practice that moves the real conversation into the room where decisions are made.",
-    href: "/downloads/Productive_Disagreement.pdf",
-  },
-  {
-    date: "June 2026",
-    title: "Honoring the Work That Actually Matters",
-    excerpt:
-      "Calling everything important is not leadership. It is noise. Honoring important work means funding it, measuring it, talking about it, and refusing to lie about it.",
-    href: "/downloads/Honoring_Important_Work.pdf",
-  },
-  {
-    date: "June 2026",
-    title: "Important Work Isn’t About What You Make",
-    excerpt:
-      "Windows are important. But when leaders define important work only through their own lens, the people doing the work notice. Importance that excludes them creates a hollow organization.",
-    href: "/downloads/Important_Work_Isnt_About_What_You_Make.pdf",
-  },
-  {
-    date: "July 2026",
-    title: "You Must Design the Struggle",
-    excerpt:
-      "Most leaders try to remove obstacles. Struggle is a resource. If you do not design it, it will design you. Important + Difficult is where trust and truth become rational.",
-    href: "/downloads/You_Must_Design_the_Struggle.pdf",
+      "Trust is an outcome, not a product. It comes through struggle and consistent action under pressure, not team-building exercises. If you want teamwork, give the team work.",
+    href: "/downloads/Trust.pdf",
   },
   {
     date: "July 2026",
@@ -64,18 +50,32 @@ const NOTES = [
     href: "/downloads/Challenge_the_Crap_Out_of_Each_Other.pdf",
   },
   {
-    date: "August 2026",
-    title: "Trust",
+    date: "July 2026",
+    title: "You Must Design the Struggle",
     excerpt:
-      "Trust is an outcome, not a product. It comes through struggle and consistent action under pressure, not team-building exercises. If you want teamwork, give the team work.",
-    href: "/downloads/Trust.pdf",
+      "Most leaders try to remove obstacles. Struggle is a resource. If you do not design it, it will design you. Important + Difficult is where trust and truth become rational.",
+    href: "/downloads/You_Must_Design_the_Struggle.pdf",
   },
   {
-    date: "October 2026",
-    title: "How Important Work Drives Truth",
+    date: "June 2026",
+    title: "Important Work Isn’t About What You Make",
     excerpt:
-      "A discussion of incentives reveals the Lie Economy in real time. The only thing that short-circuits self-protection is work important enough that people will defer their interests to it.",
-    href: "/downloads/How_Important_Work_Drives_Truth.pdf",
+      "Windows are important. But when leaders define important work only through their own lens, the people doing the work notice. Importance that excludes them creates a hollow organization.",
+    href: "/downloads/Important_Work_Isnt_About_What_You_Make.pdf",
+  },
+  {
+    date: "June 2026",
+    title: "Honoring the Work That Actually Matters",
+    excerpt:
+      "Calling everything important is not leadership. It is noise. Honoring important work means funding it, measuring it, talking about it, and refusing to lie about it.",
+    href: "/downloads/Honoring_Important_Work.pdf",
+  },
+  {
+    date: "May 2026",
+    title: "The Meeting After the Meeting",
+    excerpt:
+      "Every organization has a meeting after the meeting. Productive disagreement is the practice that moves the real conversation into the room where decisions are made.",
+    href: "/downloads/Productive_Disagreement.pdf",
   },
 ] as const;
 
