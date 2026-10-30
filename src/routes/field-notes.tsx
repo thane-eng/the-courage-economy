@@ -16,17 +16,17 @@ export const Route = createFileRoute("/field-notes")({
 const NOTES = [
   {
     date: "October 2026",
-    title: "Why companies keep buying harmony",
+    title: "The Struggle Is the Point",
     excerpt:
-      "Most organizations do not have a strategy problem. They have a courage problem. The system quietly rewards the opposite of what leaders say they want.",
-    href: "#",
+      "Why do some groups accomplish extraordinary things together while most never do? A story from the Adirondacks at 17, and what it revealed about designing organizations where the struggle itself creates trust, community, and truth.",
+    href: "/downloads/The_Struggle_Is_the_Point.pdf",
   },
   {
     date: "October 2026",
-    title: "Management debt is real",
+    title: "AI and the Struggle",
     excerpt:
-      "Comfortable lies buy short-term harmony. What they create is cynicism, disengagement, and weak accountability that compounds over time.",
-    href: "#",
+      "The central question is not whether AI will remove suffering. It will. The question is how much struggle we need to retain so that purpose, pride, and contentment remain possible. Designed productive struggle is one answer.",
+    href: "/downloads/AI_and_the_Struggle.pdf",
   },
 ] as const;
 
@@ -52,13 +52,15 @@ function FieldNotesPage() {
               <a
                 href={note.href}
                 className="mt-4 inline-block text-sm font-semibold tracking-wide text-gold uppercase hover:underline"
+                target="_blank"
+                rel="noreferrer"
               >
-                Read
+                Read PDF
               </a>
             </article>
           ))}
           <p className="pt-4 text-sm text-muted">
-            More notes coming. In the meantime, the longer essays live on{" "}
+            More notes coming. Longer essays also live on{" "}
             <a href="https://thane.substack.com" className="underline decoration-gold" target="_blank" rel="noreferrer">
               Substack
             </a>
