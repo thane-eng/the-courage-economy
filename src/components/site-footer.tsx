@@ -7,6 +7,7 @@ const FOOTER = [
   { href: "/lie-economy", label: "Lie Economy" },
   { href: "/elements", label: "Five elements" },
   { href: "/book", label: "Book" },
+  { href: "/field-notes", label: "Field notes" },
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: LINKS.substack, label: "Substack" },
