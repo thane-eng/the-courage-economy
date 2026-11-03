@@ -20,21 +20,25 @@ const STEPS = [
   {
     number: "01",
     title: "Diagnosis",
+    color: "bg-amber-50",
     body: "We start with what is actually happening, not what the organization says is happening. The diagnostic and a short conversation surface where the real conversation is living outside the room, where important work is not being treated as important, and where silence is currently cheaper than truth.",
   },
   {
     number: "02",
     title: "Incentives Assessment",
+    color: "bg-sky-50",
     body: "What an organization is, is a function of what it rewards, punishes, and tolerates. We examine the actual incentives—formal and informal—that make the current pattern rational. This is usually the hardest conversation, and the one that has to happen if anything else is going to stick.",
   },
   {
     number: "03",
     title: "Designing Productive Struggle",
+    color: "bg-emerald-50",
     body: "Struggle is a resource. We design the conditions so that important work is also difficult enough that lying becomes expensive. This includes real stakes, named tension, friction by design, and scheduled moments where challenge is expected rather than exceptional. The goal is not more conflict. The goal is better information.",
   },
   {
     number: "04",
     title: "Monitoring Progress",
+    color: "bg-violet-50",
     body: "We track whether the real conversation is moving into the room and whether the incentives are actually changing. Progress is measured by observable shifts—what gets said in meetings, what gets rewarded, what gets measured—not by engagement scores or culture statements.",
   },
 ] as const;
@@ -57,7 +61,7 @@ function WorkPage() {
             {STEPS.map((step) => (
               <div
                 key={step.number}
-                className="border border-rule bg-white p-8"
+                className={`rounded-2xl border border-rule/60 p-8 ${step.color}`}
               >
                 <p className="text-sm tracking-wide text-gold uppercase">{step.number}</p>
                 <h2 className="font-display mt-2 text-2xl tracking-display text-ink">
