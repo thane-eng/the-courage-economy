@@ -17,7 +17,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className="eyebrow">For leadership teams</p>
-          <h1 className="font-display mt-5 text-display leading-[0.95] tracking-display text-balance text-paper">
+          <h1 className="font-display mt-5 text-4xl leading-[1.1] tracking-tight text-balance text-paper sm:text-5xl">
             Most leadership teams discover the real problem after it has already cost them time, money, or people.
           </h1>
           <div className="rule-gold my-7" />
