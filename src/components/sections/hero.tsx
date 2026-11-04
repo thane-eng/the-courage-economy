@@ -16,14 +16,13 @@ export function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="eyebrow">{SITE.tagline}</p>
+          <p className="eyebrow">For leadership teams</p>
           <h1 className="font-display mt-5 text-display leading-[0.95] tracking-display text-balance text-paper">
-            The Courage
-            <span className="block italic text-gold-bright">Economy</span>
+            Most leadership teams discover the real problem after it has already cost them time, money, or people.
           </h1>
           <div className="rule-gold my-7" />
           <p className="max-w-xl text-lg leading-relaxed text-pretty text-paper-dim sm:text-xl">
-            {SITE.subtitle}. By {SITE.author}. Out {SITE.releaseDate}.
+            I help them get that information into the room while they can still do something about it.
           </p>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-paper-dim sm:text-lg">
             See where your organization sits between the Lie Economy and the Courage Economy — free, 3 minutes.
