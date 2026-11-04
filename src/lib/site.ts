@@ -27,13 +27,13 @@ export const LINKS = {
 } as const;
 
 export const NAV = [
-  { href: "/#idea", label: "The idea" },
-  { href: "/elements", label: "The map" },
+  { href: "/#idea", label: "The Idea" },
+  { href: "/elements", label: "The Map" },
   { href: "/diagnostic", label: "Tools" },
-  { href: "/book", label: "The book" },
-  { href: "/field-notes", label: "Field notes" },
+  { href: "/book", label: "The Book" },
+  { href: "/field-notes", label: "Field Notes" },
   { href: "/downloads", label: "Downloads" },
-  { href: "/work", label: "The work" },
+  { href: "/work", label: "The Work" },
   { href: "/about", label: "About" },
 ] as const;
 
