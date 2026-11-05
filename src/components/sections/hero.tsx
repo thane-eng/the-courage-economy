@@ -24,7 +24,8 @@ export function Hero() {
           <p className="max-w-xl text-lg leading-relaxed text-pretty text-paper-dim sm:text-xl">
             I help them get that information into the room while they can still do something about it.
           </p>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-paper-dim sm:text-lg">
+          <div className="rule-gold my-7" />
+          <p className="max-w-xl text-base leading-relaxed text-paper-dim sm:text-lg">
             See where your organization sits between the Lie Economy and the Courage Economy — free, 3 minutes.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
