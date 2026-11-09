@@ -42,6 +42,12 @@ const RESOURCES = [
     type: "PDF",
   },
   {
+    title: "Designed Productive Struggle",
+    description: "A practical one-page guide for leaders and facilitators. How to distinguish work that moves the needle from work that is merely hard.",
+    file: "Designed_Productive_Struggle.pdf",
+    type: "PDF",
+  },
+  {
     title: "Three Stages",
     description: "Visual of the three stages.",
     file: "3-stages.jpg",
