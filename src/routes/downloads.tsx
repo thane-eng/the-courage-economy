@@ -48,6 +48,12 @@ const RESOURCES = [
     type: "PDF",
   },
   {
+    title: "The Scorecard and the Climbers",
+    description: "Case study: a simulated plant run twenty times. What scorecards do to bad news, and what ambitious people do to scorecards.",
+    file: "The_Scorecard_and_the_Climbers.pdf",
+    type: "PDF",
+  },
+  {
     title: "Three Stages",
     description: "Visual of the three stages.",
     file: "3-stages.jpg",
