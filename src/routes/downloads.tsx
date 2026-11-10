@@ -18,6 +18,12 @@ export const Route = createFileRoute("/downloads")({
 
 const RESOURCES = [
   {
+    title: "The Scorecard and the Climbers",
+    description: "Case study: a simulated plant run twenty times. What scorecards do to bad news, and what ambitious people do to scorecards.",
+    file: "The_Scorecard_and_the_Climbers.pdf",
+    type: "PDF",
+  },
+  {
     title: "Courage Economy Overview",
     description: "Core ideas of the Courage Economy in a single page.",
     file: "courage-economy.pdf",
@@ -45,12 +51,6 @@ const RESOURCES = [
     title: "Designed Productive Struggle",
     description: "A practical one-page guide for leaders and facilitators. How to distinguish work that moves the needle from work that is merely hard.",
     file: "Designed_Productive_Struggle.pdf",
-    type: "PDF",
-  },
-  {
-    title: "The Scorecard and the Climbers",
-    description: "Case study: a simulated plant run twenty times. What scorecards do to bad news, and what ambitious people do to scorecards.",
-    file: "The_Scorecard_and_the_Climbers.pdf",
     type: "PDF",
   },
   {
