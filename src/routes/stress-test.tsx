@@ -188,7 +188,7 @@ function StressTestPage() {
 
           <div className="mx-auto mt-8 max-w-3xl flex flex-wrap gap-3">
             <Button asChild variant="outline">
-              <a href="/downloads/The_Scorecard_and_the_Climbers.pdf" download>
+              <a href="/downloads/Scorecard_Stress_Test_Sample_Readout.pdf" download>
                 <Download className="size-4" />
                 Download sample readout
               </a>
