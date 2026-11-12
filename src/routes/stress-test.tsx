@@ -186,11 +186,17 @@ function StressTestPage() {
             evidence.
           </div>
 
-          <div className="mx-auto mt-8 max-w-3xl">
+          <div className="mx-auto mt-8 max-w-3xl flex flex-wrap gap-3">
+            <Button asChild variant="outline">
+              <a href="/downloads/The_Scorecard_and_the_Climbers.pdf" download>
+                <Download className="size-4" />
+                Download sample readout
+              </a>
+            </Button>
             <Button asChild variant="outline">
               <a href="/downloads">
                 <Download className="size-4" />
-                Read the case study: The Scorecard and the Climbers
+                More field tools
               </a>
             </Button>
           </div>
