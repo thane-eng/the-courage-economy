@@ -16,6 +16,9 @@ export const Route = createFileRoute("/stress-test")({
     }),
 });
 
+const SAMPLE_REPORT = "/downloads/Scorecard_Stress_Test_Sample_Readout.pdf";
+const CASE_STUDY = "/downloads/The_Scorecard_and_the_Climbers.pdf";
+
 const RESULTS = [
   {
     label: "Scorecard rewards a clean board",
@@ -186,17 +189,11 @@ function StressTestPage() {
             evidence.
           </div>
 
-          <div className="mx-auto mt-8 max-w-3xl flex flex-wrap gap-3">
+          <div className="mx-auto mt-8 max-w-3xl">
             <Button asChild variant="outline">
-              <a href="/downloads/Scorecard_Stress_Test_Sample_Readout.pdf" download>
+              <a href={CASE_STUDY} download>
                 <Download className="size-4" />
-                Download sample readout
-              </a>
-            </Button>
-            <Button asChild variant="outline">
-              <a href="/downloads">
-                <Download className="size-4" />
-                More field tools
+                Read the case study: The Scorecard and the Climbers
               </a>
             </Button>
           </div>
@@ -276,6 +273,20 @@ function StressTestPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-10 flex flex-col items-start gap-4 rounded-lg border border-rule bg-white/60 p-6 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="font-display text-xl text-ink">See what a readout looks like</h3>
+                <p className="mt-1 text-body leading-relaxed text-ink-soft">
+                  A sample report built from the Ridgeline Components study: six pages, fictional site.
+                </p>
+              </div>
+              <Button asChild>
+                <a href={SAMPLE_REPORT} download>
+                  <Download className="size-4" />
+                  Download a sample report (PDF)
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -328,6 +339,12 @@ function StressTestPage() {
                 <a href={LINKS.calendly} target="_blank" rel="noreferrer">
                   Book a 30-minute call
                   <ArrowUpRight className="size-4" />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={SAMPLE_REPORT} download>
+                  <Download className="size-4" />
+                  Sample report (PDF)
                 </a>
               </Button>
               <Button asChild variant="ghost">

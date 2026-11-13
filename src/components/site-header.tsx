@@ -64,7 +64,7 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex" aria-label="Primary">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -79,7 +79,7 @@ export function SiteHeader() {
           ))}
           <Button asChild size="sm">
             <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-              Available now
+              Available on Amazon
             </a>
           </Button>
         </nav>
@@ -112,7 +112,7 @@ export function SiteHeader() {
           ))}
           <Button asChild className="mt-6 w-full">
             <a href={LINKS.amazon} target="_blank" rel="noreferrer">
-              Available now on Amazon!
+              Available on Amazon
             </a>
           </Button>
         </nav>

@@ -13,8 +13,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as DiagnosticRouteImport } from './routes/diagnostic'
+import { Route as DownloadsRouteImport } from './routes/downloads'
 import { Route as ElementsRouteImport } from './routes/elements'
+import { Route as FieldNotesRouteImport } from './routes/field-notes'
 import { Route as LieEconomyRouteImport } from './routes/lie-economy'
+import { Route as StressTestRouteImport } from './routes/stress-test'
 import { Route as WorkRouteImport } from './routes/work'
 
 const IndexRoute = IndexRouteImport.update({
@@ -37,14 +40,29 @@ const DiagnosticRoute = DiagnosticRouteImport.update({
   path: '/diagnostic',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DownloadsRoute = DownloadsRouteImport.update({
+  id: '/downloads',
+  path: '/downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ElementsRoute = ElementsRouteImport.update({
   id: '/elements',
   path: '/elements',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FieldNotesRoute = FieldNotesRouteImport.update({
+  id: '/field-notes',
+  path: '/field-notes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LieEconomyRoute = LieEconomyRouteImport.update({
   id: '/lie-economy',
   path: '/lie-economy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StressTestRoute = StressTestRouteImport.update({
+  id: '/stress-test',
+  path: '/stress-test',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkRoute = WorkRouteImport.update({
@@ -58,8 +76,11 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/diagnostic': typeof DiagnosticRoute
+  '/downloads': typeof DownloadsRoute
   '/elements': typeof ElementsRoute
+  '/field-notes': typeof FieldNotesRoute
   '/lie-economy': typeof LieEconomyRoute
+  '/stress-test': typeof StressTestRoute
   '/work': typeof WorkRoute
 }
 export interface FileRoutesByTo {
@@ -67,8 +88,11 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/diagnostic': typeof DiagnosticRoute
+  '/downloads': typeof DownloadsRoute
   '/elements': typeof ElementsRoute
+  '/field-notes': typeof FieldNotesRoute
   '/lie-economy': typeof LieEconomyRoute
+  '/stress-test': typeof StressTestRoute
   '/work': typeof WorkRoute
 }
 export interface FileRoutesById {
@@ -77,8 +101,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
   '/diagnostic': typeof DiagnosticRoute
+  '/downloads': typeof DownloadsRoute
   '/elements': typeof ElementsRoute
+  '/field-notes': typeof FieldNotesRoute
   '/lie-economy': typeof LieEconomyRoute
+  '/stress-test': typeof StressTestRoute
   '/work': typeof WorkRoute
 }
 export interface FileRouteTypes {
@@ -88,8 +115,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/diagnostic'
+    | '/downloads'
     | '/elements'
+    | '/field-notes'
     | '/lie-economy'
+    | '/stress-test'
     | '/work'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -97,8 +127,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/diagnostic'
+    | '/downloads'
     | '/elements'
+    | '/field-notes'
     | '/lie-economy'
+    | '/stress-test'
     | '/work'
   id:
     | '__root__'
@@ -106,8 +139,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/book'
     | '/diagnostic'
+    | '/downloads'
     | '/elements'
+    | '/field-notes'
     | '/lie-economy'
+    | '/stress-test'
     | '/work'
   fileRoutesById: FileRoutesById
 }
@@ -116,8 +152,11 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
   DiagnosticRoute: typeof DiagnosticRoute
+  DownloadsRoute: typeof DownloadsRoute
   ElementsRoute: typeof ElementsRoute
+  FieldNotesRoute: typeof FieldNotesRoute
   LieEconomyRoute: typeof LieEconomyRoute
+  StressTestRoute: typeof StressTestRoute
   WorkRoute: typeof WorkRoute
 }
 
@@ -151,6 +190,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiagnosticRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/downloads': {
+      id: '/downloads'
+      path: '/downloads'
+      fullPath: '/downloads'
+      preLoaderRoute: typeof DownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/elements': {
       id: '/elements'
       path: '/elements'
@@ -158,11 +204,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ElementsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/field-notes': {
+      id: '/field-notes'
+      path: '/field-notes'
+      fullPath: '/field-notes'
+      preLoaderRoute: typeof FieldNotesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lie-economy': {
       id: '/lie-economy'
       path: '/lie-economy'
       fullPath: '/lie-economy'
       preLoaderRoute: typeof LieEconomyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stress-test': {
+      id: '/stress-test'
+      path: '/stress-test'
+      fullPath: '/stress-test'
+      preLoaderRoute: typeof StressTestRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work': {
@@ -180,8 +240,11 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
   DiagnosticRoute: DiagnosticRoute,
+  DownloadsRoute: DownloadsRoute,
   ElementsRoute: ElementsRoute,
+  FieldNotesRoute: FieldNotesRoute,
   LieEconomyRoute: LieEconomyRoute,
+  StressTestRoute: StressTestRoute,
   WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport

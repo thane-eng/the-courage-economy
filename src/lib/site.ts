@@ -11,7 +11,7 @@ export const SITE = {
   releaseDate: "October 15, 2026",
   releaseIso: "2026-10-15",
   description:
-    "The Courage Economy by Thane Bellomo is a field guide for leaders building organizations where truth is the default. Take the free diagnostic, available now on Amazon, or start the work.",
+    "The Courage Economy by Thane Bellomo is a field guide for leaders building organizations where truth is the default. Take the free diagnostic, read the book (available now on Amazon), or start the work.",
 };
 
 export const LINKS = {
@@ -28,7 +28,6 @@ export const LINKS = {
 
 export const NAV = [
   { href: "/#idea", label: "The Idea" },
-  { href: "/elements", label: "The Map" },
   { href: "/diagnostic", label: "Tools" },
   { href: "/book", label: "The Book" },
   { href: "/field-notes", label: "Field Notes" },
