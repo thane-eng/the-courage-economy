@@ -28,4 +28,11 @@ export const ENDORSEMENTS = [
     credit:
       "Founder/Executive Director, The Center for Respectful Leadership. Author of the award-winning, bestselling business fable, The Respectful Leader",
   },
+  {
+    quote:
+      "When telling the truth can cost you your career, silence is a rational choice. The Courage Economy puts accountability squarely in the executive suite, where leaders decide who pays for speaking up.",
+    line: "When telling the truth can cost you your career, silence is a rational choice.",
+    name: "Dr. Lauran Star",
+    credit: "Organizational psychologist, forensic cultural behaviorist and author of Evidence-Based Inclusion",
+  },
 ] as const;
