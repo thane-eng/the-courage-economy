@@ -73,13 +73,13 @@ export function HeroProof() {
       onMouseLeave={() => setPaused(false)}
     >
       <blockquote>
-        <p className="text-base leading-relaxed text-paper">“{item.line}”</p>
+        <p className="text-base leading-relaxed text-ink">“{item.line}”</p>
       </blockquote>
-      <figcaption className="mt-2 text-sm text-muted">
-        <cite className="not-italic text-paper">{item.name}</cite>
-        <span> · {item.credit.split(".")[0]}</span>
+      <figcaption className="mt-2 text-sm text-ink-soft">
+        <cite className="not-italic font-semibold text-ink">{item.name}</cite>
+        <span> · {item.credit}</span>
       </figcaption>
-      <Dots index={index} setIndex={setIndex} tone="paper" />
+      <Dots index={index} setIndex={setIndex} tone="ink" />
     </figure>
   );
 }
